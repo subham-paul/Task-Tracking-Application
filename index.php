@@ -85,7 +85,7 @@ include_once("./assets/plugins.php");
                         <td><?php echo $rows['email']; ?></td>
                         <td><?php echo $rows['languages']; ?></td>
                         <td><?php echo $rows['educations']; ?></td>
-                        <td><img src="<?php echo $rows['profile_pic']; ?>" height="100px" width="100px"
+                        <td><img src="<?php echo $rows['profile_pic']; ?>" height="80px" width="80px"
                               class="rounded-circle" title="<?php echo $rows['name'] ?>'s Pic" /></td>
                         <td><?php echo date("d-m-y h:i:sA", strtotime($rows['created'])); ?></td>
                      </tr>

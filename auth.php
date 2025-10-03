@@ -7,10 +7,12 @@ function redirect($loc) {
 }
 if (!empty($_SESSION['USER'])) {
 ?>
-  <div class="float-right">
-    Welcome <?php echo $_SESSION['USER']; ?>
-    <a href="index">Profile</a> |
-    <a href="logout">Logout</a>
+  <div class="float-right m-3 p-3">
+    Welcome, <span class="font-weight-bold"><?php echo $_SESSION['USER']; ?></span>
+    <a href="view?uid=<?php echo $_SESSION['USER-ID']; ?>">
+      <img src="<?php echo $_SESSION['U-IMG']; ?>" height="30px" width="30px"
+        class="rounded-circle" title="<?php echo $_SESSION['USER']; ?>'s Pic" /></a> |
+    <a class="btn btn-sm btn-outline-danger" href="logout">Logout</a>
   </div>
 <?php
 } else {

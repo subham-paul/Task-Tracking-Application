@@ -1,6 +1,6 @@
-.jpg
-.png
-.jpeg
-.gif
-.pdf
-.docx
+*.jpg
+*.png
+*.jpeg
+*.gif
+*.pdf
+*.docx

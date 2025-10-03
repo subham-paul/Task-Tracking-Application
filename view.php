@@ -44,10 +44,10 @@
           $nameArr = explode(" ", $rows['name']);
           //print_r($nameArr);
     ?>
-          <div class="card p-3 m-3">
-            <header class="modal-header">
+          <header class="modal-header">
               <h4>Showing <span class="text-success"> <?php echo strtoupper($rows['name']); ?></span>'s Info:</h4>
-            </header>
+          </header>
+          <div class="card p-3 m-3">
             <form method="POST" enctype="multipart/form-data" action="update">
               <div class="row">
                 <div class="col">
@@ -55,23 +55,23 @@
                   <div class="form-group">
                   <div class="row">
                     <div class="col">
-                      <label for="editFname">FirstName :</label>
+                      <label for="editFname" class="font-weight-bold">FirstName :</label>
                       <input type="text" name="editFname" value="<?php echo $nameArr[0]; ?>" class="form-control">
                     </div>
                     <div class="col">
-                      <label for="editLname">LastName :</label>
+                      <label for="editLname" class="font-weight-bold">LastName :</label>
                       <input type="text" name="editLname" value="<?php echo $nameArr[1]; ?>" class="form-control">
                     </div>
                   </div>
                   </div>
 
                   <div class="form-group">
-                    <label for="editPhone">Phone :</label>
+                    <label for="editPhone" class="font-weight-bold">Phone :</label>
                     <input type="number" name="editPhone" value="<?php echo $rows['phone']; ?>" class="form-control">
                   </div>
 
                   <div class="form-group">
-                    <label for="editEmail">Email-Id :</label>
+                    <label for="editEmail" class="font-weight-bold">Email-Id :</label>
                     <input type="text" name="editEmail" value="<?php echo $rows['email']; ?>" class="form-control"> 
                   </div>
 
@@ -81,7 +81,7 @@
                         <?php $languages = explode(",", $rows['languages']);
                         //print_r($languages);
                         ?>
-                        <label for="lang">Languages Known :</label>
+                        <label for="lang" class="font-weight-bold">Languages Known :</label>
                         <select multiple name="lang[]" class="form-control" required>
                           <option <?php if (in_array("English", $languages)) { echo "selected"; } ?>>English</option>
                           <option <?php if (in_array("Bengali", $languages)) { echo "selected"; } ?>>Bengali</option>
@@ -96,7 +96,7 @@
                         // print_r($educations); 
                         ?>
                         <div class="form-group">
-                          <label for="ch">Educational Qualifications :</label>
+                          <label for="ch" class="font-weight-bold">Educational Qualifications :</label>
                           <div class="form-check">
                             <input type="checkbox" class="form-check-input" onchange="checkAll(this)" name="ch_all" id="ch_all">
                             <label for="ch_all">Select All</label>
@@ -148,7 +148,7 @@
                   alt="User Image" title="<?php echo $rows['name']; ?>'s Pic">
                   
                   <div class="form-group">
-                    <label for="editAvatar">Change Profile Pic : </label>
+                    <label for="editAvatar" class="font-weight-bold">Change Profile Pic : </label>
                     <input type="file" name="editAvatar" id="editAvatar" class="form-control" onchange="loadImage(event)">
                     
                     <script type="text/javascript">
