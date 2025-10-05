@@ -1,3 +1,4 @@
+<?php session_start();?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,12 +6,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SignUP Form</title>
+    <?php include_once("./assets/plugins.php"); ?>
 </head>
 
 <body>
     <?php
-    session_start();
-    include_once("./assets/plugins.php"); 
     /*One time Messaging => Flash Messaging */
     if (!empty($_SESSION['message'])) {
         if ($_SESSION['message'] == "signup_success") {
@@ -134,7 +134,8 @@
             </div>
             <div class="form-group" align="center">
                 <button class="btn btn-sm btn-outline-success">Submit Form</button>
-                <button class="btn btn-sm btn-outline-danger" type="reset">Reset Form</button>
+                <button class="btn btn-sm btn-outline-danger" type="reset">Clear Form</button>
+                <a class="btn btn-sm btn-outline-success" href="signin.php">SignIn Page</a>
             </div>
         </form>
     </div>

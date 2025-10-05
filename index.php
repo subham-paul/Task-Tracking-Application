@@ -1,7 +1,3 @@
-<?php
-include_once("./assets/plugins.php");
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,13 +5,19 @@ include_once("./assets/plugins.php");
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>List Of All Users</title>
+   <?php 
+   include_once("./assets/plugins.php");
+   include_once("auth.php");
+   include_once("navbar.php");
+   ?>
 </head>
 
 <body>
+   <header class="modal-header">
+      <h3>Displaying All Users Details</h3>
+   </header>
    <div class="container-fluid">
       <?php
-      include_once("auth.php");
-      include_once("navbar.php");
       if (!empty($_SESSION['message'])) {
          if ($_SESSION['message'] == "delete_success") {
             echo "<div class='alert alert-success'>User's Profile removed successfully...</div>";
@@ -24,13 +26,10 @@ include_once("./assets/plugins.php");
          }
          unset($_SESSION['message']);
       } ?>
-      <header class="modal-header">
-         <h4>Displaying All Users Details</h4>
-      </header>
       <div class="card p-3 m-3">
          <div class="table-responsive">
             <table class="table table-hover">
-               <tr>
+               <tr class="table-warning">
                   <th>View Details</th>
                   <th>Name</th>
                   <th>Phone</th>
@@ -78,7 +77,7 @@ include_once("./assets/plugins.php");
                      // print_r($rows['name']);
                ?>
                      <tr>
-                        <td><a class="btn btn-sm btn-outline-info"
+                        <td><a class="btn btn-sm btn-outline-danger"
                               href="view?uid=<?php echo $rows['user_id']; ?>">Show Details</a></td>
                         <td><?php echo ucwords($rows['name']); ?></td>
                         <td><?php echo $rows['phone']; ?></td>

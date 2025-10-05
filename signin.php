@@ -33,8 +33,9 @@
         <input type="password" name="pass1" id="pass1" required class="form-control">
       </div>
       <div class="form-group" align="center">
-        <button class="btn btn-sm btn-outline-primary">LogIn Here</button>
-        <button class="btn btn-sm btn-outline-danger" type="reset">Reset Form</button>
+        <button class="btn btn-sm btn-outline-primary">Login Here</button>
+        <button class="btn btn-sm btn-outline-danger" type="reset">Clear Form</button>
+        <a class="btn btn-sm btn-outline-success" href="signup.php">SignUp Page</a>
       </div>
     </form>
   </div>

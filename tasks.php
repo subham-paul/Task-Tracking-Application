@@ -27,7 +27,7 @@
       <h4>List Of All Tasks</h4>
     </header>
     <table class="table table-hover">
-      <tr>
+      <tr class="table-success">
         <th>View Details</th>
         <th>Task Title</th>
         <th>Description</th>
